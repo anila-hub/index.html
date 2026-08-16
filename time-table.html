@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time table</title>
+    <style>
+        body{
+            background-color: rgb(39, 202, 129);
+        }
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgb(11, 104, 70);
+    color: white;
+}
+
+td {
+    background-color: rgb(172, 226, 189);
+    text-align: center;
+}
+
+.break {
+    background-color: rgb(94, 175, 139);
+    font-weight: bold;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 15px;
+}
+</style>
+</head>
+<body><center>
+    <table border="1" cellspacing="10px" cellpadding="20px">
+        <h2><b>TIME TABLE</b></h2>
+        <tr>
+            <th>Time</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+        <tr>
+         <td>11:00-12:30</td>
+         <td>java</td>
+         <td>java</td>
+         <td>java</td>
+         <td>java</td>
+         <td>java</td>
+         <td>java</td>    
+        </tr>
+        <tr>
+             <td>12:30-2:00</td>
+         <td>sql</td>
+         <td>sql</td>
+         <td>sql</td>
+         <td>sql</td>
+         <td>sql</td>
+         <td>sql</td>
+        </tr>
+        <tr>
+             <td>2:00-2:30</td>
+         <td>
+             <td colspan="6" class="break">BREAK</td>
+         </td>
+     </tr>
+     <tr>
+             <td>12:30-2:00</td>
+         <td>Web</td>
+         <td>Web</td>
+         <td>Web</td>
+         <td>Web</td>
+         <td>Web</td>
+         <td>Web</td>
+        </tr>
+    </table>
+</center>
+    
+</body>
+</html>

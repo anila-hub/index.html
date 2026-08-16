@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, #0b1030 0%, #05070f 70%);
+    overflow: hidden;
+  }
+
+  #stage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #fff3c0, #ffb84d 55%, #ff7a1a 100%);
+    box-shadow: 0 0 60px 20px rgba(255,170,60,0.6);
+    transform: translate(-50%, -50%);
+  }
+
+  #orbit-mercury, #orbit-venus, #orbit-earth, #orbit-mars, #orbit-jupiter, #orbit-saturn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #orbit-mercury { width: 280px;  height: 280px; }
+  #orbit-venus   { width: 380px;  height: 380px; }
+  #orbit-earth   { width: 500px;  height: 500px; }
+  #orbit-mars    { width: 620px;  height: 620px; }
+  #orbit-jupiter { width: 800px;  height: 800px; }
+  #orbit-saturn  { width: 940px;  height: 940px;}
+  #wrap-mercury, #wrap-venus, #wrap-earth, #wrap-mars, #wrap-jupiter, #wrap-saturn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  #wrap-mercury { animation-duration: 6s;  }
+  #wrap-venus   { animation-duration: 10s; }
+  #wrap-earth   { animation-duration: 15s; }
+  #wrap-mars    { animation-duration: 22s; }
+  #wrap-jupiter { animation-duration: 35s; }
+  #wrap-saturn  { animation-duration: 48s; }
+
+  #planet-mercury, #planet-venus, #planet-earth, #planet-mars, #planet-jupiter, #planet-saturn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+  }
+
+  #planet-mercury {
+    width: 12px; height: 12px;
+    background: #b5b5b5;
+    transform: translate(140px, -50%);
+  }
+  #planet-venus {
+    width: 20px; height: 20px;
+    background: #e0c27a;
+    transform: translate(190px, -50%);
+  }
+  #planet-earth {
+    width: 22px; height: 22px;
+    background: #3f7bd6;
+    transform: translate(250px, -50%);
+  }
+  #planet-mars {
+    width: 16px; height: 16px;
+    background: #c1440e;
+    transform: translate(310px, -50%);
+  }
+  #planet-jupiter {
+    width: 34px; height: 34px;
+    background: #d9a066;
+    transform: translate(400px, -50%);
+  }
+  #planet-saturn {
+    width: 30px; height: 30px;
+    background: #e2c290;
+    outline: 2px solid rgba(226,194,144,0.5);
+    transform: translate(470px, -50%);
+  }
+
+  @keyframes spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+</style>
+</head>
+<body>
+    <div id="stage">
+  <div id="sun"></div>
+
+  <div id="orbit-mercury"></div>
+  <div id="wrap-mercury"><div id="planet-mercury"></div></div>
+
+  <div id="orbit-venus"></div>
+  <div id="wrap-venus"><div id="planet-venus"></div></div>
+
+  <div id="orbit-earth"></div>
+  <div id="wrap-earth"><div id="planet-earth"></div></div>
+
+  <div id="orbit-mars"></div>
+  <div id="wrap-mars"><div id="planet-mars"></div></div>
+
+  <div id="orbit-jupiter"></div>
+  <div id="wrap-jupiter"><div id="planet-jupiter"></div></div>
+
+  <div id="orbit-saturn"></div>
+  <div id="wrap-saturn"><div id="planet-saturn"></div></div>
+</div>
+</body>
+</html>
